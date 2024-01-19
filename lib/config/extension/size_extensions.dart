@@ -1,4 +1,5 @@
-import '../screenutil/screenutil.dart';
+
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension SizeExtension on double {
   double get w => ScreenUtil().setWidth(this);

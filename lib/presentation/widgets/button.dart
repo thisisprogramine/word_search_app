@@ -35,7 +35,7 @@ class Button extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: Sizes.dimen_6.h, horizontal: width != null ? width! : Sizes.dimen_0.w),
+        padding: EdgeInsets.symmetric(vertical: Sizes.dimen_10.h, horizontal: width != null ? width! : Sizes.dimen_0.w),
         child: Text(
             text, style: Theme.of(context).textTheme.buttonStyle?.copyWith(fontWeight: FontWeight.bold)
         ),

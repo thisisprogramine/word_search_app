@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Expanded(
                           child: Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: Sizes.dimen_6.h,
+                                vertical: Sizes.dimen_14.h,
                                 horizontal: Sizes.dimen_0.w),
                             child: Card(
                               shape: const RoundedRectangleBorder(
@@ -84,11 +84,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   hintText: 'Search',
                                   prefixIcon: Padding(
                                       padding: EdgeInsets.symmetric(
-                                          vertical: Sizes.dimen_2.h,
+                                          vertical: Sizes.dimen_4.h,
                                           horizontal: Sizes.dimen_12.w),
                                       child: const Icon(Icons.search, size: Sizes.dimen_24,)),
                                   contentPadding: EdgeInsets.symmetric(
-                                      vertical: Sizes.dimen_2.h,
+                                      vertical: Sizes.dimen_4.h,
                                       horizontal: Sizes.dimen_12.w),
                                   isDense: true,
                                   border: InputBorder.none,

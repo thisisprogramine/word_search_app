@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:word_search_app/presentation/bloc/word_cubit/word_search_cubit.dart';
 import 'package:word_search_app/presentation/routes/fade_page_route_builder.dart';
 import 'package:word_search_app/presentation/routes/routes.dart';
@@ -36,7 +37,6 @@ class _WordSearchAppState extends State<WordSearchApp> {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init();
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -46,20 +46,27 @@ class _WordSearchAppState extends State<WordSearchApp> {
           create: (context) => wordChangeCubit,
         )
       ],
-      child: MaterialApp(
-        navigatorKey: _navigatorKey,
-        debugShowCheckedModeBanner: false,
-        title: "Word Search App",
-        theme: AppTheme.getAppTheme(context: context),
-        initialRoute: RouteList.initial,
-        onGenerateRoute: (RouteSettings settings) {
-          final routes = Routes.getRoutes(settings);
-          final WidgetBuilder? builder = routes[settings.name];
-          return FadePageRouteBuilder(
-            builder: builder!,
-            settings: settings,
+      child: ScreenUtilInit(
+          designSize: const Size(360, 690),
+          minTextAdapt: true,
+          splitScreenMode: true,
+        builder: (_ , ctx) {
+          return MaterialApp(
+            navigatorKey: _navigatorKey,
+            debugShowCheckedModeBanner: false,
+            title: "Word Search App",
+            theme: AppTheme.getAppTheme(context: context),
+            initialRoute: RouteList.initial,
+            onGenerateRoute: (RouteSettings settings) {
+              final routes = Routes.getRoutes(settings);
+              final WidgetBuilder? builder = routes[settings.name];
+              return FadePageRouteBuilder(
+                builder: builder!,
+                settings: settings,
+              );
+            },
           );
-        },
+        }
       ),
     );
   }

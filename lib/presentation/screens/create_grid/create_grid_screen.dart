@@ -70,6 +70,24 @@ class _CreateGridScreenState extends State<CreateGridScreen> {
               ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text("Please fill all the blocs...", style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.white),))
               );
+
+              // int i = 0;
+              // if(mRow * nColumn == 25) {
+              //   ["R", "G", "P", "B", "R", "K", "N", "J",
+              //     "Z", "V", "F", "I", "V", "O", "K", "K",
+              //     "Y", "N", "R", "D", "D", "T", "O", "S", "V"].forEach((char) {
+              //       words[i] = char;
+              //       i++;
+              //   });
+              //
+              // }else if(mRow * nColumn == 15) {
+              //   ["J", "G", "E", "D", "S", "J", "Q", "M", "Y", "M", "W", "B", "X", "Q", "K"].forEach((char) {
+              //     words[i] = char;
+              //     i++;
+              //   });
+              // }
+
+
             }
           }else {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -87,7 +105,7 @@ class _CreateGridScreenState extends State<CreateGridScreen> {
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.symmetric(
-                        vertical: Sizes.dimen_6.h,
+                        vertical: Sizes.dimen_14.h,
                         horizontal: Sizes.dimen_0.w),
                     child: Card(
                       shape: const RoundedRectangleBorder(
@@ -115,11 +133,11 @@ class _CreateGridScreenState extends State<CreateGridScreen> {
                           hintText: 'Enter Row',
                           prefixIcon: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: Sizes.dimen_2.h,
+                                  vertical: Sizes.dimen_4.h,
                                   horizontal: Sizes.dimen_12.w),
                               child: const Icon(Icons.table_rows, size: Sizes.dimen_24,)),
                           contentPadding: EdgeInsets.symmetric(
-                              vertical: Sizes.dimen_2.h,
+                              vertical: Sizes.dimen_4.h,
                               horizontal: Sizes.dimen_12.w),
                           isDense: true,
                           border: InputBorder.none,
@@ -132,7 +150,7 @@ class _CreateGridScreenState extends State<CreateGridScreen> {
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.symmetric(
-                        vertical: Sizes.dimen_6.h,
+                        vertical: Sizes.dimen_14.h,
                         horizontal: Sizes.dimen_0.w),
                     child: Card(
                       shape: const RoundedRectangleBorder(
@@ -160,11 +178,11 @@ class _CreateGridScreenState extends State<CreateGridScreen> {
                           hintText: 'Enter Column',
                           prefixIcon: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: Sizes.dimen_2.h,
+                                  vertical: Sizes.dimen_4.h,
                                   horizontal: Sizes.dimen_12.w),
                               child: const Icon(Icons.view_column, size: Sizes.dimen_24,)),
                           contentPadding: EdgeInsets.symmetric(
-                              vertical: Sizes.dimen_2.h,
+                              vertical: Sizes.dimen_4.h,
                               horizontal: Sizes.dimen_12.w),
                           isDense: true,
                           border: InputBorder.none,
